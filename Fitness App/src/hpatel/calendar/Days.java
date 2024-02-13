@@ -12,7 +12,7 @@ package hpatel.calendar;
  * @author Harsh Patel
  *
  */
-public class Day {
+public class Days {
 
 	/* A day of the month */
 	private int day;
@@ -24,7 +24,7 @@ public class Day {
 	/** The list of exercise done for the day */
 //	private ArrayList<Exercise> exercises;
 	
-	public Day(int day, double weight) {
+	public Days(int day, double weight) {
 		setDay(day);
 		setWeight(weight);
 	}

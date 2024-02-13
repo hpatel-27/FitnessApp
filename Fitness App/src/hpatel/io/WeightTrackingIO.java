@@ -5,9 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import hpatel.calendar.Day;
+import hpatel.calendar.Days;
 import hpatel.calendar.Months;
-import hpatel.calendar.Year;
+import hpatel.calendar.Years;
 
 /**
  * @author Harsh Patel
@@ -22,7 +22,7 @@ public class WeightTrackingIO {
 		//Empty constructor
 	}
 	
-	private static void processYear( Scanner scan, Year y ) {
+	private static void processYear( Scanner scan, Years y ) {
 		// we have already read the year,
 		// next line should have the month name ONLY
 		if ( scan.hasNextLine() ) {
@@ -71,7 +71,7 @@ public class WeightTrackingIO {
 		
 		try {
 			Scanner fileReader = new Scanner(new FileInputStream(filename));
-			ArrayList<Year> y = new ArrayList<Year>();
+			ArrayList<Years> y = new ArrayList<Years>();
 			
 			while ( fileReader.hasNextLine() ) {
 				
@@ -87,7 +87,7 @@ public class WeightTrackingIO {
 					int num = Integer.parseInt(rest);
 					
 					// create the year with the given value
-					Year n = new Year( num );
+					Years n = new Years( num );
 					
 					// create months for this year (originally empty, unless there is data for any of the days
 					n.addMonth("January");
@@ -137,8 +137,8 @@ public class WeightTrackingIO {
 		int year = in.nextInt();
 		double weight = in.nextDouble();
 		
-		Year y = new Year(year);
-		Day d = new Day(day, weight);
+		Years y = new Years(year);
+		Days d = new Days(day, weight);
 		
 				
 		Months m = new Months(monthString);

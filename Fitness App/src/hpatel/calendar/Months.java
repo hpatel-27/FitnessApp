@@ -18,7 +18,7 @@ public class Months {
 	
 	private String name; 
 	
-	private ArrayList<Day> days;
+	private ArrayList<Days> days;
 	
 
 	// Set the month int depending on what the string was; 
@@ -63,51 +63,51 @@ public class Months {
 		
 		case "January":
 			this.month = 1;
-			days = new ArrayList<Day>(31);
+			days = new ArrayList<Days>(31);
 			break;
 		case "February":
 			this.month = 2;
-			days = new ArrayList<Day>(28);
+			days = new ArrayList<Days>(28);
 			break;
 		case "March":
 			this.month = 3;
-			days = new ArrayList<Day>(31);
+			days = new ArrayList<Days>(31);
 			break;	
 		case "April":
 			this.month = 4;
-			days = new ArrayList<Day>(30);
+			days = new ArrayList<Days>(30);
 			break;
 		case "May":
 			this.month = 5;
-			days = new ArrayList<Day>(30);
+			days = new ArrayList<Days>(30);
 			break;
 		case "June":
 			this.month = 6;
-			days = new ArrayList<Day>(31);
+			days = new ArrayList<Days>(31);
 			break;
 		case "July":
 			this.month = 7;
-			days = new ArrayList<Day>(31);
+			days = new ArrayList<Days>(31);
 			break;
 		case "August":
 			this.month = 8;
-			days = new ArrayList<Day>(31);
+			days = new ArrayList<Days>(31);
 			break;
 		case "September":
 			this.month = 9;
-			days = new ArrayList<Day>(30);
+			days = new ArrayList<Days>(30);
 			break;
 		case "October":
 			this.month = 10;
-			days = new ArrayList<Day>(31);
+			days = new ArrayList<Days>(31);
 			break;
 		case "November":
 			this.month = 11;
-			days = new ArrayList<Day>(30);
+			days = new ArrayList<Days>(30);
 			break;
 		case "December":
 			this.month = 12;
-			days = new ArrayList<Day>(31);
+			days = new ArrayList<Days>(31);
 			break;
 		default:
 			break;
@@ -123,7 +123,7 @@ public class Months {
 		return this.name;
 	}
 	
-	public Day getDay(int day) {
+	public Days getDay(int day) {
 		if ( day < 0 || day > 31 ) {
 			return null;
 		}
@@ -131,8 +131,8 @@ public class Months {
 		return days.get(day);
 	}
 	
-	public Day addDay(int day, double weight) {
-		Day d = new Day( day, weight );
+	public Days addDay(int day, double weight) {
+		Days d = new Days( day, weight );
 		days.add(d);
 		return d;
 	}

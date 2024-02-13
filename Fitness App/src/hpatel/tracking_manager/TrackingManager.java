@@ -6,7 +6,7 @@ package hpatel.tracking_manager;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import hpatel.calendar.Year;
+import hpatel.calendar.Years;
 
 
 
@@ -19,11 +19,11 @@ public class TrackingManager {
 	/** Single static instance of a TrackingManager */
 	private static TrackingManager manager;
 	
-	public ArrayList<Year> years;
+	public ArrayList<Years> years;
 	
 	/** Constructs a TrackingManager */
 	private TrackingManager() {
-		years = new ArrayList<Year>(5);
+		years = new ArrayList<Years>(5);
 	}
 	
 	/**
@@ -45,7 +45,7 @@ public class TrackingManager {
 	}
 	
 	public void updateInputs() {
-		Year y = new Year( 2023 );
+		Years y = new Years( 2023 );
 		years.add(y);
 		y.addMonth("January");
 		y.addMonth("February");

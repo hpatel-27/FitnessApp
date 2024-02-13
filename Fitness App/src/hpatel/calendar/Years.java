@@ -9,14 +9,14 @@ import java.util.ArrayList;
  * @author Harsh Patel
  *
  */
-public class Year {
+public class Years {
 	
 	private int year;
 		
 	private ArrayList<Months> months;
 	
 	
-	public Year(int year) {
+	public Years(int year) {
 		setYear(year);
 		months = new ArrayList<Months>( 12 );
 	}
@@ -38,8 +38,8 @@ public class Year {
 		return m;
 	}
 	
-	public Day addDay( int month, int day, double weight ) {
-		Day d = months.get(month).addDay( day, weight );
+	public Days addDay( int month, int day, double weight ) {
+		Days d = months.get(month).addDay( day, weight );
 		
 		return d;
 	}
@@ -52,7 +52,7 @@ public class Year {
 		return months.get(month);
 	}
 	
-	public Day getDay(int month, int day) {
+	public Days getDay(int month, int day) {
 		
 		return getMonth( month ).getDay(day);
 
