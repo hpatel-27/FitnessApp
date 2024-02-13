@@ -11,14 +11,20 @@ import java.util.ArrayList;
  */
 public class Years {
 	
+	private static final int MAX_MONTHS = 12;
+	
+	private static final int MIN_MONTHS = 1;
+
+	
 	private int year;
 		
+	
 	private ArrayList<Months> months;
 	
 	
 	public Years(int year) {
 		setYear(year);
-		months = new ArrayList<Months>( 12 );
+		months = new ArrayList<Months>( MAX_MONTHS );
 	}
 	
 	/* Setter for the year field, cannot be changed once made */
@@ -44,7 +50,7 @@ public class Years {
 		return d;
 	}
 	public Months getMonth( int month ) {
-		if ( month < 0 || month > 12 ) {
+		if ( month < MIN_MONTHS || month > MAX_MONTHS ) {
 			return null;
 		}
 		

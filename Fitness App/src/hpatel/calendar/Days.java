@@ -31,11 +31,21 @@ public class Days {
 	
 	/* Setter for the weight field, cannot be changed once made */
 	public void setWeight(double weight) {
+		if ( weight < 0 ) {
+			throw new IllegalArgumentException("Error day input given!");
+		}
+		if ( weight < 150.0 ) {
+			throw new IllegalArgumentException("Bruh...");
+		}
+		
 		this.weight = weight;
 	}
 	
 	/* Setter for the day field, cannot be changed once made */
 	public void setDay(int day) {
+		if ( day < 0 ) {
+			throw new IllegalArgumentException("Error day input given!");
+		}
 		this.day = day;
 	}
 	
